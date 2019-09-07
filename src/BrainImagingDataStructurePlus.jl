@@ -1,6 +1,18 @@
 module BrainImagingDataStructurePaths
 using FilePaths
 
+include("ScannerHardware.jl")
+using .ScannerHardware
+
+include("SequenceSpecifics.jl")
+using .SequenceSpecifics
+
+include("InPlaneSpatielEncoding.jl")
+using .InPlaneSpatielEncoding
+
+include("TimingParameters.jl")
+using .TimingParameters
+
 abstract type BrainImagingDataStructurePath <: AbstractPath end
 const BIDSPath = BrainImagingDataStructurePath
 
